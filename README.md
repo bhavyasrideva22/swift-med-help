@@ -1,73 +1,138 @@
-# Welcome to your Lovable project
+# Swift Med Help
 
-## Project info
+A comprehensive healthcare platform for finding and booking appointments with expert doctors and hospitals.
 
-**URL**: https://lovable.dev/projects/7c95f791-9320-4b9b-b33d-29b8e1d44388
+## Features
 
-## How can I edit this code?
+- **Doctor Search**: Find doctors by specialization, location, and ratings
+- **Hospital Directory**: Browse hospitals with detailed information
+- **Department Overview**: Explore medical departments and their services
+- **Appointment Booking**: Book appointments instantly with digital OP cards
+- **Smart Filtering**: Advanced search and filter options
+- **Verified Reviews**: Read patient reviews and ratings
+- **Digital OP Cards**: Get instant digital outpatient cards
 
-There are several ways of editing your application.
+## Technology Stack
 
-**Use Lovable**
+This project is built with modern web technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7c95f791-9320-4b9b-b33d-29b8e1d44388) and start prompting.
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React 18** - Modern React with hooks
+- **React Router** - Client-side routing
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful and accessible UI components
+- **Lucide React** - Beautiful icon library
+- **React Hook Form** - Form handling
+- **Sonner** - Toast notifications
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (version 18 or higher)
+- npm or yarn package manager
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd swift-med-help
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Navbar.tsx      # Navigation component
+│   └── Footer.tsx      # Footer component
+├── pages/              # Page components
+│   ├── Index.tsx       # Home page
+│   ├── Hospitals.tsx   # Hospitals listing
+│   ├── Doctors.tsx     # Doctors listing
+│   ├── Departments.tsx # Medical departments
+│   ├── DoctorProfile.tsx # Individual doctor profile
+│   ├── Appointment.tsx # Appointment booking
+│   └── OPCard.tsx      # Digital OP card
+├── data/               # Mock data and constants
+│   └── mockData.ts     # Sample data
+├── lib/                # Utility functions
+│   └── utils.ts        # Common utilities
+└── assets/             # Static assets
+    └── hero-medical.jpg # Hero image
+```
 
-This project is built with:
+## Features Overview
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Home Page
+- Hero section with call-to-action
+- Feature highlights
+- Hospital showcase
+- Statistics display
 
-## How can I deploy this project?
+### Doctor Search
+- Advanced filtering by specialization, hospital, rating
+- Search by name, qualification, or specialization
+- Sort by rating, price, or experience
+- Detailed doctor profiles
 
-Simply open [Lovable](https://lovable.dev/projects/7c95f791-9320-4b9b-b33d-29b8e1d44388) and click on Share -> Publish.
+### Hospital Directory
+- Hospital listings with ratings and reviews
+- Filter by city, services, and facilities
+- Detailed hospital information
+- Department listings
 
-## Can I connect a custom domain to my Lovable project?
+### Appointment Booking
+- Easy appointment booking process
+- Patient information collection
+- Date and time selection
+- Digital OP card generation
 
-Yes, you can!
+### Medical Departments
+- Comprehensive department information
+- Available treatments and procedures
+- Doctor listings by department
+- Equipment and facilities information
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For support, email support@swiftmedhelp.com or create an issue in the repository.
+
+---
+
+**Swift Med Help** - Making healthcare accessible and convenient for everyone.

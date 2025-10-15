@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Create blue background
+        ctx.fillStyle = '#3B82F6';
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // Draw shopping cart (medical theme)
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(8, 12);
+        ctx.lineTo(10, 24);
+        ctx.lineTo(22, 24);
+        ctx.lineTo(24, 12);
+        ctx.lineTo(8, 12);
+        ctx.stroke();
+        
+        // Draw cart wheels
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(12, 28, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(20, 28, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Draw cart handle
+        ctx.beginPath();
+        ctx.moveTo(6, 12);
+        ctx.lineTo(26, 12);
+        ctx.stroke();
+        
+        // Draw medical cross
+        ctx.beginPath();
+        ctx.moveTo(16, 6);
+        ctx.lineTo(16, 18);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(10, 12);
+        ctx.lineTo(22, 12);
+        ctx.stroke();
+        
+        // Convert to data URL for download
+        const dataURL = canvas.toDataURL('image/png');
+        console.log('Data URL:', dataURL);
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = 'favicon.png';
+        link.href = dataURL;
+        link.textContent = 'Download Favicon';
+        document.body.appendChild(link);
+    </script>
+</body>
+</html>

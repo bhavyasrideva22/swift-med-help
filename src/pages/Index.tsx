@@ -1,27 +1,15 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Heart, Search, Calendar, Star, MapPin, Stethoscope } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { cities } from "@/data/mockData";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Heart, Search, Calendar, Star, MapPin, Stethoscope, Clock, Users, Shield } from "lucide-react";
+import { hospitals } from "@/data/mockData";
 import heroImage from "@/assets/hero-medical.jpg";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Index = () => {
-  const [selectedCity, setSelectedCity] = useState<string>("");
   const navigate = useNavigate();
-
-  const handleFindDoctors = () => {
-    if (selectedCity) {
-      navigate(`/hospitals?city=${selectedCity}`);
-    }
-  };
 
   const features = [
     {
@@ -48,6 +36,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Navbar />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-background to-muted/30 py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -68,43 +57,6 @@ const Index = () => {
                 instant booking, and verified reviews - all in one place.
               </p>
 
-              {/* City Selector */}
-              <Card className="p-6 shadow-lg border-0 bg-card">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <label className="text-sm font-medium mb-2 block text-foreground">
-                      Select Your City
-                    </label>
-                    <Select value={selectedCity} onValueChange={setSelectedCity}>
-                      <SelectTrigger className="w-full h-12">
-                        <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4 text-muted-foreground" />
-                          <SelectValue placeholder="Choose your city" />
-                        </div>
-                      </SelectTrigger>
-                      <SelectContent className="bg-popover z-50">
-                        {cities.map((city) => (
-                          <SelectItem key={city} value={city}>
-                            {city}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="sm:self-end">
-                    <Button 
-                      variant="hero" 
-                      size="lg" 
-                      className="w-full sm:w-auto h-12"
-                      onClick={handleFindDoctors}
-                      disabled={!selectedCity}
-                    >
-                      <Search className="w-5 h-5 mr-2" />
-                      Find Doctors
-                    </Button>
-                  </div>
-                </div>
-              </Card>
             </div>
 
             <div className="relative">
@@ -125,7 +77,7 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Why Choose MediLink+
+              Why Choose Swift Med Help
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Your health deserves the best care. We make finding it simple.
@@ -156,18 +108,21 @@ const Index = () => {
             Ready to Find Your Doctor?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Join thousands of patients who trust MediLink+ for their healthcare needs
+            Join thousands of patients who trust Swift Med Help for their healthcare needs
           </p>
           <Button 
             variant="outline" 
             size="lg" 
             className="bg-white hover:bg-white/90 text-primary border-0 font-semibold"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => navigate('/hospitals')}
           >
             Get Started Now
           </Button>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

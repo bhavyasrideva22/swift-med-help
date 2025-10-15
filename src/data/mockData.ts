@@ -1,12 +1,129 @@
 export const cities = [
   "Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata", 
-  "Hyderabad", "Pune", "Ahmedabad", "Jaipur", "Lucknow"
+  "Hyderabad", "Pune", "Ahmedabad", "Jaipur", "Lucknow",
+  "Gurgaon", "Noida", "Kochi", "Indore", "Bhopal",
+  "Chandigarh", "Coimbatore", "Vadodara", "Visakhapatnam", "Nagpur",
+  "Thiruvananthapuram", "Patna", "Vijayawada", "Agra", "Nashik",
+  "Faridabad", "Meerut", "Rajkot", "Kalyan", "Vasai-Virar"
 ];
 
 export const specializations = [
   "Cardiology", "Neurology", "Orthopedics", "Pediatrics",
   "Dermatology", "Ophthalmology", "ENT", "General Medicine",
-  "Gastroenterology", "Nephrology", "Oncology", "Psychiatry"
+  "Gastroenterology", "Nephrology", "Oncology", "Psychiatry",
+  "Gynecology", "Urology", "Pulmonology", "Endocrinology",
+  "Radiology", "Anesthesiology", "Emergency Medicine", "Dental"
+];
+
+export const departments = [
+  {
+    id: 1,
+    name: "Cardiology",
+    description: "Comprehensive heart and cardiovascular system care with advanced diagnostic and treatment facilities",
+    icon: "❤️",
+    treatments: ["Angioplasty", "Bypass Surgery", "Pacemaker Implantation", "Cardiac Catheterization", "Echocardiography", "Stress Testing", "Holter Monitoring", "Cardiac Rehabilitation"],
+    consultingHours: "Mon-Fri: 9 AM - 5 PM, Sat: 9 AM - 1 PM",
+    emergencyAvailable: true,
+    equipment: ["Echocardiogram", "ECG Machine", "Cardiac Catheterization Lab", "Pacemaker Clinic", "Stress Test Equipment"],
+    specializations: ["Interventional Cardiology", "Electrophysiology", "Heart Failure Management", "Preventive Cardiology"],
+    averageWaitTime: "15-30 minutes",
+    consultationFee: "₹800 - ₹2000",
+    departmentHead: "Dr. Rajesh Kumar",
+    establishedYear: 2010,
+    totalBeds: 25,
+    successRate: "98.5%",
+    keyFeatures: ["24/7 Emergency Services", "Advanced Cardiac Surgery", "Minimally Invasive Procedures", "Comprehensive Rehabilitation"]
+  },
+  {
+    id: 2,
+    name: "Orthopedics",
+    description: "Specialized care for bones, joints, muscles, and sports injuries with state-of-the-art surgical facilities",
+    icon: "🦴",
+    treatments: ["Joint Replacement", "Arthroscopy", "Fracture Treatment", "Spinal Surgery", "Sports Medicine", "Ligament Reconstruction", "Cartilage Repair", "Bone Grafting"],
+    consultingHours: "Mon-Sat: 8 AM - 6 PM",
+    emergencyAvailable: true,
+    equipment: ["X-Ray Machine", "MRI Scanner", "Arthroscopy Equipment", "Bone Densitometer", "Physical Therapy Unit"],
+    specializations: ["Joint Replacement Surgery", "Sports Medicine", "Spinal Surgery", "Trauma Surgery", "Pediatric Orthopedics"],
+    averageWaitTime: "20-45 minutes",
+    consultationFee: "₹600 - ₹1500",
+    departmentHead: "Dr. Amit Patel",
+    establishedYear: 2008,
+    totalBeds: 30,
+    successRate: "97.8%",
+    keyFeatures: ["Minimally Invasive Surgery", "Robotic-Assisted Procedures", "Sports Injury Clinic", "Rehabilitation Center"]
+  },
+  {
+    id: 3,
+    name: "Pediatrics",
+    description: "Comprehensive child healthcare from birth to adolescence with specialized pediatric care units",
+    icon: "👶",
+    treatments: ["Neonatal Care", "Vaccination", "Growth Monitoring", "Child Development", "Pediatric Surgery", "Emergency Pediatrics", "Child Psychology", "Nutrition Counseling"],
+    consultingHours: "Mon-Sat: 9 AM - 2 PM, Sun: 9 AM - 12 PM",
+    emergencyAvailable: true,
+    equipment: ["Neonatal ICU", "Pediatric Ventilators", "Growth Charts", "Vaccination Refrigerator", "Child-Friendly Examination Rooms"],
+    specializations: ["Neonatology", "Pediatric Cardiology", "Pediatric Neurology", "Child Development", "Adolescent Medicine"],
+    averageWaitTime: "10-25 minutes",
+    consultationFee: "₹500 - ₹1200",
+    departmentHead: "Dr. Priya Sharma",
+    establishedYear: 2012,
+    totalBeds: 20,
+    successRate: "99.2%",
+    keyFeatures: ["Child-Friendly Environment", "24/7 Neonatal Care", "Vaccination Program", "Growth Monitoring Clinic"]
+  },
+  {
+    id: 4,
+    name: "Neurology",
+    description: "Advanced treatment for brain, spinal cord, and nervous system disorders with cutting-edge technology",
+    icon: "🧠",
+    treatments: ["Stroke Management", "Epilepsy Treatment", "Brain Surgery", "Neurological Rehabilitation", "EEG/EMG", "Deep Brain Stimulation", "Neuro-Oncology", "Movement Disorders"],
+    consultingHours: "Mon-Fri: 10 AM - 4 PM",
+    emergencyAvailable: true,
+    equipment: ["MRI Scanner", "CT Scanner", "EEG Machine", "EMG Equipment", "Neuro Navigation System", "Intraoperative Monitoring"],
+    specializations: ["Stroke Medicine", "Epilepsy", "Movement Disorders", "Neuro-Oncology", "Neuro-Rehabilitation"],
+    averageWaitTime: "25-40 minutes",
+    consultationFee: "₹1000 - ₹2500",
+    departmentHead: "Dr. Sneha Reddy",
+    establishedYear: 2015,
+    totalBeds: 15,
+    successRate: "96.7%",
+    keyFeatures: ["Stroke Unit", "Epilepsy Monitoring", "Neuro-Rehabilitation", "Advanced Brain Surgery"]
+  },
+  {
+    id: 5,
+    name: "General Medicine",
+    description: "Primary healthcare and internal medicine with comprehensive diagnostic and treatment services",
+    icon: "🩺",
+    treatments: ["Health Checkups", "Diabetes Management", "Hypertension Care", "Infectious Diseases", "Preventive Care", "Chronic Disease Management", "Geriatric Care", "Travel Medicine"],
+    consultingHours: "Mon-Sat: 8 AM - 8 PM",
+    emergencyAvailable: true,
+    equipment: ["Blood Pressure Monitors", "Glucose Meters", "ECG Machine", "Pulse Oximeter", "Laboratory Equipment"],
+    specializations: ["Internal Medicine", "Diabetes Care", "Hypertension Management", "Infectious Diseases", "Geriatric Medicine"],
+    averageWaitTime: "10-20 minutes",
+    consultationFee: "₹400 - ₹1000",
+    departmentHead: "Dr. Vikram Singh",
+    establishedYear: 2005,
+    totalBeds: 40,
+    successRate: "98.1%",
+    keyFeatures: ["Comprehensive Health Checkups", "Chronic Disease Management", "Preventive Care Programs", "24/7 Emergency Services"]
+  },
+  {
+    id: 6,
+    name: "Dermatology",
+    description: "Advanced skin, hair, and nail care with cosmetic and medical dermatology services",
+    icon: "✨",
+    treatments: ["Skin Cancer Screening", "Acne Treatment", "Hair Restoration", "Laser Therapy", "Cosmetic Procedures", "Psoriasis Treatment", "Eczema Management", "Anti-Aging Treatments"],
+    consultingHours: "Mon-Sat: 10 AM - 6 PM",
+    emergencyAvailable: false,
+    equipment: ["Dermatoscope", "Laser Equipment", "Cryotherapy Unit", "Phototherapy Unit", "Skin Biopsy Tools"],
+    specializations: ["Medical Dermatology", "Cosmetic Dermatology", "Dermatopathology", "Pediatric Dermatology", "Hair Disorders"],
+    averageWaitTime: "15-30 minutes",
+    consultationFee: "₹700 - ₹1800",
+    departmentHead: "Dr. Anjali Mehta",
+    establishedYear: 2018,
+    totalBeds: 10,
+    successRate: "97.3%",
+    keyFeatures: ["Advanced Laser Treatments", "Skin Cancer Screening", "Cosmetic Procedures", "Hair Restoration Clinic"]
+  }
 ];
 
 export const hospitals = [
@@ -16,7 +133,19 @@ export const hospitals = [
     city: "Mumbai",
     address: "Parsn Complex, Sahar Road, Andheri East",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80"
+    reviews: 1247,
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
+    departments: [1, 2, 3, 4, 5, 6],
+    established: 1983,
+    beds: 500,
+    emergency: true,
+    ambulance: true,
+    parking: true,
+    wifi: true,
+    services: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    segregation: [1, 2, 3, 4, 5, 6],
+    consultationTypes: [1, 2, 3, 4, 5],
+    facilities: ["24/7 Emergency", "Ambulance", "Pharmacy", "Lab", "Radiology", "Blood Bank", "ICU", "Parking", "WiFi", "Cafeteria"]
   },
   {
     id: 2,
@@ -24,7 +153,19 @@ export const hospitals = [
     city: "Mumbai",
     address: "Mulund Goregaon Link Road",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80"
+    reviews: 892,
+    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80",
+    departments: [1, 2, 4, 5],
+    established: 2001,
+    beds: 300,
+    emergency: true,
+    ambulance: true,
+    parking: true,
+    wifi: false,
+    services: [1, 2, 3, 4, 5, 7, 8],
+    segregation: [1, 2, 3, 4, 5],
+    consultationTypes: [1, 2, 3, 4],
+    facilities: ["24/7 Emergency", "Ambulance", "Pharmacy", "Lab", "Radiology", "ICU", "Parking"]
   },
   {
     id: 3,
@@ -32,7 +173,19 @@ export const hospitals = [
     city: "Mumbai",
     address: "A-791, Bandra Reclamation",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1632833239869-a37e3a5806d2?w=800&q=80"
+    reviews: 1156,
+    image: "https://images.unsplash.com/photo-1632833239869-a37e3a5806d2?w=800&q=80",
+    departments: [1, 2, 3, 4, 5, 6],
+    established: 1978,
+    beds: 400,
+    emergency: true,
+    ambulance: true,
+    parking: true,
+    wifi: true,
+    services: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    segregation: [1, 2, 3, 4, 5, 6],
+    consultationTypes: [1, 2, 3, 4, 5],
+    facilities: ["24/7 Emergency", "Ambulance", "Pharmacy", "Lab", "Radiology", "Blood Bank", "ICU", "Parking", "WiFi", "Cafeteria"]
   },
   {
     id: 4,
@@ -40,7 +193,19 @@ export const hospitals = [
     city: "Delhi",
     address: "Ansari Nagar, New Delhi",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80"
+    reviews: 2156,
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
+    departments: [1, 2, 3, 4, 5, 6],
+    established: 1956,
+    beds: 2000,
+    emergency: true,
+    ambulance: true,
+    parking: true,
+    wifi: true,
+    services: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    segregation: [1, 2, 3, 4, 5, 6],
+    consultationTypes: [1, 2, 3, 4, 5],
+    facilities: ["24/7 Emergency", "Ambulance", "Pharmacy", "Lab", "Radiology", "Blood Bank", "ICU", "Parking", "WiFi", "Cafeteria"]
   },
   {
     id: 5,
@@ -48,7 +213,59 @@ export const hospitals = [
     city: "Delhi",
     address: "Saket, New Delhi",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80"
+    reviews: 978,
+    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80",
+    departments: [1, 2, 4, 5, 6],
+    established: 2006,
+    beds: 350,
+    emergency: true,
+    ambulance: true,
+    parking: true,
+    wifi: true,
+    services: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    segregation: [1, 2, 3, 4, 5, 6],
+    consultationTypes: [1, 2, 3, 4, 5],
+    facilities: ["24/7 Emergency", "Ambulance", "Pharmacy", "Lab", "Radiology", "Blood Bank", "ICU", "Parking", "WiFi", "Cafeteria"]
+  },
+  {
+    id: 6,
+    name: "Manipal Hospital",
+    city: "Bangalore",
+    address: "98, HAL Airport Road, Kodihalli",
+    rating: 4.5,
+    reviews: 743,
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
+    departments: [1, 2, 3, 4, 5],
+    established: 1991,
+    beds: 250,
+    emergency: true,
+    ambulance: true,
+    parking: true,
+    wifi: true,
+    services: [1, 2, 3, 4, 5, 7, 8, 9],
+    segregation: [1, 2, 3, 4, 5],
+    consultationTypes: [1, 2, 3, 4, 5],
+    facilities: ["24/7 Emergency", "Ambulance", "Pharmacy", "Lab", "Radiology", "ICU", "Parking", "WiFi"]
+  },
+  {
+    id: 7,
+    name: "Apollo Hospital",
+    city: "Chennai",
+    address: "21, Greams Lane, Off Greams Road",
+    rating: 4.8,
+    reviews: 1089,
+    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80",
+    departments: [1, 2, 3, 4, 5, 6],
+    established: 1983,
+    beds: 600,
+    emergency: true,
+    ambulance: true,
+    parking: true,
+    wifi: true,
+    services: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    segregation: [1, 2, 3, 4, 5, 6],
+    consultationTypes: [1, 2, 3, 4, 5],
+    facilities: ["24/7 Emergency", "Ambulance", "Pharmacy", "Lab", "Radiology", "Blood Bank", "ICU", "Parking", "WiFi", "Cafeteria"]
   }
 ];
 
@@ -65,7 +282,12 @@ export const doctors = [
     reviews: 234,
     timing: "Mon-Fri: 10 AM - 2 PM",
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80",
-    about: "Specialized in interventional cardiology with expertise in angioplasty and cardiac catheterization."
+    about: "Specialized in interventional cardiology with expertise in angioplasty and cardiac catheterization.",
+    languages: ["English", "Hindi", "Marathi"],
+    education: ["MBBS - AIIMS Delhi", "MD Cardiology - AIIMS Delhi", "Fellowship in Interventional Cardiology - Cleveland Clinic"],
+    awards: ["Best Cardiologist Award 2023", "Excellence in Patient Care 2022"],
+    availability: "Available",
+    nextAvailable: "Today 2:00 PM"
   },
   {
     id: 2,
@@ -79,7 +301,12 @@ export const doctors = [
     reviews: 456,
     timing: "Mon-Sat: 9 AM - 1 PM",
     image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80",
-    about: "Expert in newborn care, child development, and pediatric emergencies."
+    about: "Expert in newborn care, child development, and pediatric emergencies.",
+    languages: ["English", "Hindi", "Gujarati"],
+    education: ["MBBS - Grant Medical College", "MD Pediatrics - KEM Hospital"],
+    awards: ["Outstanding Pediatrician 2023", "Child Care Excellence Award 2022"],
+    availability: "Available",
+    nextAvailable: "Tomorrow 10:00 AM"
   },
   {
     id: 3,
@@ -93,7 +320,12 @@ export const doctors = [
     reviews: 312,
     timing: "Mon-Fri: 3 PM - 6 PM",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80",
-    about: "Specialist in joint replacement surgery and sports medicine."
+    about: "Specialist in joint replacement surgery and sports medicine.",
+    languages: ["English", "Hindi", "Gujarati"],
+    education: ["MBBS - BJ Medical College", "MS Orthopedics - AIIMS Delhi"],
+    awards: ["Joint Replacement Excellence 2023", "Sports Medicine Pioneer 2022"],
+    availability: "Available",
+    nextAvailable: "Today 4:00 PM"
   },
   {
     id: 4,
@@ -107,7 +339,12 @@ export const doctors = [
     reviews: 198,
     timing: "Tue-Sat: 11 AM - 3 PM",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80",
-    about: "Focused on stroke management, epilepsy, and neurodegenerative disorders."
+    about: "Focused on stroke management, epilepsy, and neurodegenerative disorders.",
+    languages: ["English", "Hindi", "Telugu"],
+    education: ["MBBS - Osmania Medical College", "DM Neurology - NIMHANS Bangalore"],
+    awards: ["Neurology Excellence Award 2023", "Stroke Care Specialist 2022"],
+    availability: "Available",
+    nextAvailable: "Tuesday 11:00 AM"
   },
   {
     id: 5,
@@ -121,7 +358,69 @@ export const doctors = [
     reviews: 523,
     timing: "Mon-Sat: 8 AM - 12 PM",
     image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80",
-    about: "General physician with expertise in diabetes, hypertension, and preventive care."
+    about: "General physician with expertise in diabetes, hypertension, and preventive care.",
+    languages: ["English", "Hindi", "Punjabi"],
+    education: ["MBBS - Maulana Azad Medical College", "MD Internal Medicine - AIIMS Delhi"],
+    awards: ["Primary Care Excellence 2023", "Patient Satisfaction Award 2022"],
+    availability: "Available",
+    nextAvailable: "Today 9:00 AM"
+  },
+  {
+    id: 6,
+    name: "Dr. Anjali Mehta",
+    specialization: "Dermatology",
+    hospitalId: 3,
+    qualification: "MBBS, MD (Dermatology)",
+    experience: 8,
+    consultationFee: 1300,
+    rating: 4.7,
+    reviews: 189,
+    timing: "Mon-Sat: 10 AM - 6 PM",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80",
+    about: "Specialized in cosmetic dermatology, skin cancer treatment, and laser procedures.",
+    languages: ["English", "Hindi", "Marathi"],
+    education: ["MBBS - Grant Medical College", "MD Dermatology - KEM Hospital"],
+    awards: ["Dermatology Innovation Award 2023", "Cosmetic Excellence 2022"],
+    availability: "Available",
+    nextAvailable: "Today 2:00 PM"
+  },
+  {
+    id: 7,
+    name: "Dr. Ravi Verma",
+    specialization: "Cardiology",
+    hospitalId: 4,
+    qualification: "MBBS, DM (Cardiology)",
+    experience: 22,
+    consultationFee: 2000,
+    rating: 4.9,
+    reviews: 567,
+    timing: "Mon-Fri: 9 AM - 1 PM",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80",
+    about: "Senior cardiologist with expertise in complex cardiac surgeries and heart transplants.",
+    languages: ["English", "Hindi"],
+    education: ["MBBS - AIIMS Delhi", "DM Cardiology - AIIMS Delhi", "Fellowship - Mayo Clinic"],
+    awards: ["Lifetime Achievement Award 2023", "Cardiac Surgery Excellence 2022"],
+    availability: "Available",
+    nextAvailable: "Tomorrow 10:00 AM"
+  },
+  {
+    id: 8,
+    name: "Dr. Sunita Agarwal",
+    specialization: "Pediatrics",
+    hospitalId: 4,
+    qualification: "MBBS, MD (Pediatrics), DCH",
+    experience: 16,
+    consultationFee: 1200,
+    rating: 4.8,
+    reviews: 423,
+    timing: "Mon-Sat: 9 AM - 2 PM",
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80",
+    about: "Pediatrician with special interest in neonatology and child development disorders.",
+    languages: ["English", "Hindi", "Bengali"],
+    education: ["MBBS - Calcutta Medical College", "MD Pediatrics - AIIMS Delhi", "DCH - Royal College"],
+    awards: ["Neonatology Excellence 2023", "Child Development Specialist 2022"],
+    availability: "Available",
+    nextAvailable: "Today 11:00 AM"
   }
 ];
 
@@ -131,4 +430,125 @@ export const treatments = [
   { id: 3, name: "Joint Replacement", department: "Orthopedics", hospitalId: 2 },
   { id: 4, name: "Arthroscopy", department: "Orthopedics", hospitalId: 2 },
   { id: 5, name: "Neonatal Care", department: "Pediatrics", hospitalId: 1 },
+];
+
+export const patientReviews = [
+  {
+    id: 1,
+    doctorId: 1,
+    patientName: "Rahul Verma",
+    rating: 5,
+    comment: "Excellent doctor with great patience. Explained everything clearly and made me feel comfortable throughout the consultation.",
+    date: "2024-01-15",
+    verified: true
+  },
+  {
+    id: 2,
+    doctorId: 1,
+    patientName: "Anjali Desai",
+    rating: 5,
+    comment: "Very professional and caring. Highly recommended! The treatment was effective and the follow-up care was excellent.",
+    date: "2024-01-10",
+    verified: true
+  },
+  {
+    id: 3,
+    doctorId: 1,
+    patientName: "Suresh Nair",
+    rating: 4,
+    comment: "Good experience. Wait time was a bit long but worth it. Doctor was thorough in his examination.",
+    date: "2024-01-08",
+    verified: true
+  },
+  {
+    id: 4,
+    doctorId: 2,
+    patientName: "Priya Patel",
+    rating: 5,
+    comment: "Dr. Priya is amazing with children. My daughter was scared but she made her feel comfortable. Great pediatrician!",
+    date: "2024-01-12",
+    verified: true
+  },
+  {
+    id: 5,
+    doctorId: 2,
+    patientName: "Rajesh Kumar",
+    rating: 5,
+    comment: "Best pediatrician in the city. Very knowledgeable and patient with kids. Highly recommend for all parents.",
+    date: "2024-01-05",
+    verified: true
+  },
+  {
+    id: 6,
+    doctorId: 3,
+    patientName: "Meera Singh",
+    rating: 4,
+    comment: "Good orthopedic surgeon. My knee replacement surgery went well. Recovery was smooth with proper guidance.",
+    date: "2024-01-14",
+    verified: true
+  },
+  {
+    id: 7,
+    doctorId: 4,
+    patientName: "Amit Shah",
+    rating: 5,
+    comment: "Dr. Sneha helped me with my migraine issues. Very thorough in diagnosis and treatment. Highly recommended!",
+    date: "2024-01-11",
+    verified: true
+  },
+  {
+    id: 8,
+    doctorId: 5,
+    patientName: "Sunita Gupta",
+    rating: 4,
+    comment: "Good general physician. Helped me manage my diabetes effectively. Regular follow-ups were very helpful.",
+    date: "2024-01-09",
+    verified: true
+  }
+];
+
+export const feedbackCategories = [
+  "Doctor's Knowledge",
+  "Communication",
+  "Wait Time",
+  "Facility Cleanliness",
+  "Staff Behavior",
+  "Value for Money"
+];
+
+export const consultationTypes = [
+  { id: 1, name: "In-Person", description: "Visit hospital for physical consultation", icon: "🏥", priceMultiplier: 1.0 },
+  { id: 2, name: "Video Call", description: "Online video consultation", icon: "📹", priceMultiplier: 0.8 },
+  { id: 3, name: "Phone Call", description: "Telephone consultation", icon: "📞", priceMultiplier: 0.6 },
+  { id: 4, name: "Emergency", description: "Urgent medical attention", icon: "🚨", priceMultiplier: 1.5 },
+  { id: 5, name: "Follow-up", description: "Post-treatment follow-up", icon: "🔄", priceMultiplier: 0.7 }
+];
+
+export const services = [
+  { id: 1, name: "Emergency Services", description: "24/7 emergency medical care", icon: "🚨", available: true },
+  { id: 2, name: "Ambulance", description: "Emergency ambulance services", icon: "🚑", available: true },
+  { id: 3, name: "Pharmacy", description: "In-house pharmacy", icon: "💊", available: true },
+  { id: 4, name: "Laboratory", description: "Medical testing and diagnostics", icon: "🧪", available: true },
+  { id: 5, name: "Radiology", description: "X-ray, CT, MRI services", icon: "📷", available: true },
+  { id: 6, name: "Blood Bank", description: "Blood storage and transfusion", icon: "🩸", available: true },
+  { id: 7, name: "ICU", description: "Intensive Care Unit", icon: "🏥", available: true },
+  { id: 8, name: "Parking", description: "Patient and visitor parking", icon: "🅿️", available: true },
+  { id: 9, name: "WiFi", description: "Free internet access", icon: "📶", available: true },
+  { id: 10, name: "Cafeteria", description: "Food and beverage services", icon: "🍽️", available: true }
+];
+
+export const segregationTypes = [
+  { id: 1, name: "General Ward", description: "Standard accommodation", price: 0, icon: "🛏️" },
+  { id: 2, name: "Semi-Private", description: "2-4 bed sharing", price: 2000, icon: "🏠" },
+  { id: 3, name: "Private Room", description: "Single occupancy", price: 5000, icon: "🏡" },
+  { id: 4, name: "Deluxe Room", description: "Premium accommodation", price: 8000, icon: "🏰" },
+  { id: 5, name: "ICU", description: "Intensive care", price: 15000, icon: "🏥" },
+  { id: 6, name: "Emergency", description: "Emergency care", price: 10000, icon: "🚨" }
+];
+
+export const timeSlots = [
+  "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+  "12:00 PM", "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM",
+  "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM", "05:00 PM", "05:30 PM",
+  "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM", "08:00 PM"
 ];
